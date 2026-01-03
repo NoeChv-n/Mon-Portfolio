@@ -59,7 +59,7 @@
             top: 0;
             z-index: 100;
             backdrop-filter: blur(20px);
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(107, 69, 69, 0.8);
         }
 
         nav {
@@ -116,7 +116,7 @@
 
         .hero p {
             font-size: 1.3rem;
-            color: #6f6f74;
+            color: #8d8a8a;
             margin-bottom: 40px;
             max-width: 600px;
             margin-left: auto;
