@@ -145,3 +145,13 @@ function connect() {
 
 init();
 animate();
+// ===== TITRE DYNAMIQUE (Easter Egg) =====
+let docTitle = document.title; // 
+
+window.addEventListener("blur", () => {
+    document.title = "404: Recruteur introuvable ?"; 
+});
+
+window.addEventListener("focus", () => {
+    document.title = docTitle; // Remet le titre normal quand on revient
+});
