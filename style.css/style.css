@@ -227,7 +227,6 @@ nav {
   display: flex;
   gap: 60px;
   align-items: center;
-  /* TODO MARDI CSS : Vérifier que c'est du flexbox avec gap */
 }
 
 .about-image {
@@ -323,7 +322,6 @@ nav {
   gap: 40px;
   margin-top: 60px;
   flex-direction: column;
-  /* TODO MARDI CSS : Vérifier la structure (colonnes empilées) */
 }
 
 .project-card {
@@ -349,7 +347,7 @@ nav {
 .project-image {
   min-height: 300px;
   width: 40%;
-  background-image: url(../img/Capture\ d’écran\ 2026-01-04\ à\ 10.08.11.png);
+  background-image: url(/img/jamespot.png);
   height: 250px;
   background-size: cover;
   border-radius: 16px;
@@ -364,7 +362,7 @@ nav {
 .project-image2 {
   min-height: 300px;
   width: 40%;
-  background-image: url(../img/1763744444858.jpeg);
+  background-image: url(/img/1763744444858.jpeg);
   height: 250px;
   align-items: center;
   background-size: cover;
