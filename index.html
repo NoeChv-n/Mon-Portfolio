@@ -1,184 +1,271 @@
-
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Noé Chauvin</title>
-    <link rel="stylesheet" href="style.css/style.css">
-    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=eMJFlZiyvaqY&format=png&color=000000" type="image/x-icon">
+    <link rel="stylesheet" href="style.css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/?size=100&id=eMJFlZiyvaqY&format=png&color=000000"
+      type="image/x-icon"
+    />
   </head>
-<body>
+  <body>
     <canvas id="canvas-background"></canvas>
     <!-- ===== HEADER / NAVIGATION ===== -->
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    Noé Chauvin
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#about">Mon histoire</a></li>
-                    <li><a href="#skills">Mes compétences</a></li>
-                    <li><a href="#projects">Mes projets</a></li>
-                    <li><a href="#contact">Me contacter</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <nav>
+          <div class="logo">Noé Chauvin</div>
+          <ul class="nav-links">
+            <li><a href="#about">Mon histoire</a></li>
+            <li><a href="#skills">Mes compétences</a></li>
+            <li><a href="#projects">Mes projets</a></li>
+            <li><a href="#contact">Me contacter</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- ===== HERO SECTION ===== -->
     <section class="hero">
-        <div class="container">
-            <h1 class="reveal delay-1">
-               Avant, je gérais des artistes. <br> Aujourd'hui, je fais parler les données.
-            </h1>
-            <p class="reveal delay-2">
-                Un algorithme sans vision business, c'est comme un budget mal géré : ça coûte cher et ça ne rapporte rien. Grâce à mon passé de commercial et manager, je code avec une finalité précise : la performance. Découvrez comment j'allie mes compétences techniques (Python, SQL) à ma culture du résultat pour créer de la valeur.
-            </p>
-            <a href="#projects" class="cta-button reveal delay-3">Découvrir mes projets</a>
+      <div class="container">
+        <h1 class="reveal delay-1">
+          Avant, je gérais des artistes. <br />
+          Aujourd'hui, je fais parler les données.
+        </h1>
+        <p class="reveal delay-2">
+          Un algorithme sans vision business, c'est comme un budget mal géré :
+          ça coûte cher et ça ne rapporte rien. Grâce à mon passé de commercial
+          et manager, je code avec une finalité précise : la performance.
+          Découvrez comment j'allie mes compétences techniques (Python, SQL) à
+          ma culture du résultat pour créer de la valeur.
+        </p>
+        <div class="hero-buttons reveal delay-3">
+          <a href="#projects" class="cta-button"> Découvrir mes projets </a>
+
+          <a href="cv.pdf" target="_blank" class="secondary-button">
+            Télécharger mon CV
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- ===== ABOUT SECTION ===== -->
     <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
-            
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="./img/43eb04fc-5341-4534-914a-5114637c9218.png" alt="Photo de profil">
-                </div>
+      <div class="container">
+        <h2 class="section-title">À propos de moi</h2>
 
-                <div class="about-text">
-                    <h2>
-                        Les choses à savoir sur mon parcours
-                    </h2>
-                    <h3>Une vision 360° du business.</h3> 
-                    <p>
-                    Mon parcours n'est pas linéaire, et c'est ma force. En gérant des budgets, des clients et des équipes opérationnelles pendant plusieurs années, j'ai acquis une compréhension intime des problématiques d'entreprise que la plupart des profils purement techniques n'ont pas.
-                    </p>
-                    <h3>Coder pour résoudre.</h3>
-                    <p>
-                    Je ne code pas pour la beauté du geste, mais pour l'impact. Que ce soit pour optimiser un parcours client ou prédire une tendance, j'utilise ma stack technique (SQL, Python, Viz) avec un seul objectif en tête : apporter une réponse pragmatique et chiffrée à un problème réel.
-                    </p>
-                </div>
-            </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="./img/43eb04fc-5341-4534-914a-5114637c9218.png"
+              alt="Photo de profil"
+            />
+          </div>
+
+          <div class="about-text">
+            <h2>Les choses à savoir sur mon parcours</h2>
+            <h3>Une vision 360° du business.</h3>
+            <p>
+              Mon parcours n'est pas linéaire, et c'est ma force. En gérant des
+              budgets, des clients et des équipes opérationnelles pendant
+              plusieurs années, j'ai acquis une compréhension intime des
+              problématiques d'entreprise que la plupart des profils purement
+              techniques n'ont pas.
+            </p>
+            <h3>Coder pour résoudre.</h3>
+            <p>
+              Je ne code pas pour la beauté du geste, mais pour l'impact. Que ce
+              soit pour optimiser un parcours client ou prédire une tendance,
+              j'utilise ma stack technique (SQL, Python, Viz) avec un seul
+              objectif en tête : apporter une réponse pragmatique et chiffrée à
+              un problème réel.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- ===== SKILLS SECTION ===== -->
     <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">Mes Compétences</h2>
-            
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="img/icons8-code-source-96.png" alt="Logo code source" width="60"></div>
-                    <h3>Data Science & Ingénierie</h3>
-                    <p>Collecter, nettoyer et modéliser la donnée. Je maîtrise les langages standards (Python, SQL) et les bibliothèques de Machine Learning (Scikit-learn, Pandas) pour construire des architectures robustes et fiables.</p>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Mes Compétences</h2>
 
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="img/icons8-vision-96.png" alt="Logo code source" width="60"></div>
-                    <h3>Vision Business & Stratégie</h3>
-                    <p>La technique n'est qu'un moyen. Fort de mon expérience en gestion et développement commercial, je traduis vos enjeux stratégiques en indicateurs clés (KPIs) et en outils d'aide à la décision concrets.</p>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="img/icons8-gestion-de-projet-96.png" alt="Logo code source" width="60"></div>
-                    <h3>Pilotage de Projet & Agilité</h3>
-                    <p>De la définition du besoin à la livraison finale. Habitué aux méthodologies Agiles (Scrum) et au travail en équipe, je garantis le respect des délais et l'adaptation rapide aux feedbacks, comme lors de mon succès au Hackathon Jamespot.</p>
-                </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="img/icons8-code-source-96.png"
+                alt="Logo code source"
+                width="60"
+              />
             </div>
+            <h3>Data Science & Ingénierie</h3>
+            <p>
+              Collecter, nettoyer et modéliser la donnée. Je maîtrise les
+              langages standards (Python, SQL) et les bibliothèques de Machine
+              Learning (Scikit-learn, Pandas) pour construire des architectures
+              robustes et fiables.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="img/icons8-vision-96.png"
+                alt="Logo code source"
+                width="60"
+              />
+            </div>
+            <h3>Vision Business & Stratégie</h3>
+            <p>
+              La technique n'est qu'un moyen. Fort de mon expérience en gestion
+              et développement commercial, je traduis vos enjeux stratégiques en
+              indicateurs clés (KPIs) et en outils d'aide à la décision
+              concrets.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="img/icons8-gestion-de-projet-96.png"
+                alt="Logo code source"
+                width="60"
+              />
+            </div>
+            <h3>Pilotage de Projet & Agilité</h3>
+            <p>
+              De la définition du besoin à la livraison finale. Habitué aux
+              méthodologies Agiles (Scrum) et au travail en équipe, je garantis
+              le respect des délais et l'adaptation rapide aux feedbacks, comme
+              lors de mon succès au Hackathon Jamespot.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- ===== PROJECTS SECTION ===== -->
     <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title">Mes Projets</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"> <img src=""></div>
-                    <div class="project-content">
-                        <h3>Optimisation de l'Onboarding SaaS (Vainqueur Hackathon Jamespot)</h3>
-                        <p>Comment améliorer l'adoption d'un outil collaboratif complexe ? Notre audit a révélé des frictions dès la première connexion. Pour y remédier, j'ai co-conçu un parcours de "pré-onboarding" immersif qui guide l'utilisateur avant même son arrivée sur la plateforme. Une solution centrée sur l'expérience utilisateur (UX) qui nous a valu la 1ère place du jury.</p>
-                        <a href="#" class="project-link">Voir le projet →</a>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Mes Projets</h2>
 
-                <div class="project-card">
-                    <div class="project-image2"><img src=""></div>
-                    <div class="project-content">
-                        <h3>Développement Full-Stack & GenAI (Projet Heartz)</h3>
-                        <p> Pour le lancement de cette marque de joaillerie, j'ai assuré un accompagnement 360° : du recueil des besoins à la mise en ligne. J'ai développé un site sur-mesure en utilisant une stack hybride (HTML/CSS/JS) couplée à du No-Code et de l'IA Générative. Le résultat ? Une identité numérique forte livrée rapidement, sans sacrifier la qualité technique.</p>
-                        <a href="#" class="project-link">Voir le projet →</a>
-                    </div>
-
-                    
-                </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image"><img src="" /></div>
+            <div class="project-content">
+              <h3>
+                Optimisation de l'Onboarding SaaS (Vainqueur Hackathon Jamespot)
+              </h3>
+              <p>
+                Comment améliorer l'adoption d'un outil collaboratif complexe ?
+                Notre audit a révélé des frictions dès la première connexion.
+                Pour y remédier, j'ai co-conçu un parcours de "pré-onboarding"
+                immersif qui guide l'utilisateur avant même son arrivée sur la
+                plateforme. Une solution centrée sur l'expérience utilisateur
+                (UX) qui nous a valu la 1ère place du jury.
+              </p>
+              <a href="#" class="project-link">Voir le projet →</a>
             </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image2"><img src="" /></div>
+            <div class="project-content">
+              <h3>Développement Full-Stack & GenAI (Projet Heartz)</h3>
+              <p>
+                Pour le lancement de cette marque de joaillerie, j'ai assuré un
+                accompagnement 360° : du recueil des besoins à la mise en ligne.
+                J'ai développé un site sur-mesure en utilisant une stack hybride
+                (HTML/CSS/JS) couplée à du No-Code et de l'IA Générative. Le
+                résultat ? Une identité numérique forte livrée rapidement, sans
+                sacrifier la qualité technique.
+              </p>
+              <a href="#" class="project-link">Voir le projet →</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- ===== CONTACT SECTION / FORM ===== -->
     <section class="contact" id="contact">
-        <div class="container">
-            <h2>Me Contacter</h2>
-            
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Votre nom</label>
-                    <input type="text" id="name" name="name">
-                </div>
+      <div class="container">
+        <h2>Me Contacter</h2>
 
-                <div class="form-group">
-                    <label for="email">Votre email</label>
-                    <input type="email" id="email" name="email">
-                </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Votre nom</label>
+            <input type="text" id="name" name="name" />
+          </div>
 
-                <div class="form-group">
-                    <label for="message">Votre message</label>
-                    <textarea id="message" name="message"></textarea>
-                </div>
+          <div class="form-group">
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="email" />
+          </div>
 
-                <button type="submit" class="submit-button">Envoyer</button>
-            </form>
-        </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+      </div>
     </section>
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>À propos</h3>
-                    <p>Recherche un stage dès le 25 mai puis une alternance à partir de septembre</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>À propos</h3>
+            <p>
+              Recherche un stage dès le 25 mai puis une alternance à partir de
+              septembre
+            </p>
+          </div>
 
-                <div class="footer-section">
-                    <h3>Liens rapides</h3>
-                    <p><a href="#about" style="color: #a1a1a6; text-decoration: none;">À propos</a></p>
-                    <p><a href="#projects" style="color: #a1a1a6; text-decoration: none;">Projets</a></p>
-                    <p><a href="#contact" style="color: #a1a1a6; text-decoration: none;">Contact</a></p>
-                </div>
+          <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <p>
+              <a href="#about" style="color: #a1a1a6; text-decoration: none"
+                >À propos</a
+              >
+            </p>
+            <p>
+              <a href="#projects" style="color: #a1a1a6; text-decoration: none"
+                >Projets</a
+              >
+            </p>
+            <p>
+              <a href="#contact" style="color: #a1a1a6; text-decoration: none"
+                >Contact</a
+              >
+            </p>
+          </div>
 
-                <div class="footer-section">
-                    <h3>Suivez-moi</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/noé-chauvin/"><img src="img/icons8-linkedin-48.png" ></a>
-                        <a href="https://github.com/NoeChv-n?tab=repositories"><img src="img/icons8-github-48.png" ></a>
-                    </div>
-                </div>
+          <div class="footer-section">
+            <h3>Suivez-moi</h3>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/noé-chauvin/"
+                ><img src="img/icons8-linkedin-48.png"
+              /></a>
+              <a href="https://github.com/NoeChv-n?tab=repositories"
+                ><img src="img/icons8-github-48.png"
+              /></a>
             </div>
-
-            <div class="footer-bottom">
-                © 2025 Noé Chauvin. Tous droits réservés.
-            </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          © 2025 Noé Chauvin. Tous droits réservés.
+        </div>
+      </div>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
