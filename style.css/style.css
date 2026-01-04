@@ -110,7 +110,7 @@ header {
 }
 /* ===== HEADER / NAVIGATION ===== */
 header {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: transparent;
   border-bottom: 1px solid #333;
   padding: 20px 0;
   position: sticky;
@@ -123,7 +123,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* TODO MARDI CSS : Vérifier que c'est du flexbox correct */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.05); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);  
+  box-shadow: none;
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -663,25 +671,23 @@ footer {
 
 .tech-marquee {
     width: 100%;
-    overflow: hidden; /* Cache ce qui dépasse */
-    background: rgba(255, 255, 255, 0.05); /* Fond très légèrement plus clair que le noir */
+    overflow: hidden; 
+    background: rgba(255, 255, 255, 0.05); 
     padding: 30px 0;
-    margin-bottom: 60px; /* Espace avant le titre "Mes Compétences" */
+    margin-bottom: 60px; 
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
     position: relative;
 }
 
-/* La piste qui bouge */
 .tech-track {
     display: flex;
-    width: calc(100px * 28); /* Largeur approximative : 14 logos * 2 * 100px */
-    animation: scroll 40s linear infinite; /* Animation continue */
+    width: calc(100px * 28); 
+    animation: scroll 40s linear infinite; 
 }
 
-/* Chaque logo */
 .tech-item {
-    width: 100px; /* Espace réservé pour chaque logo */
+    width: 100px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -689,21 +695,18 @@ footer {
 }
 
 .tech-item img {
-    height: 40px; /* Taille des logos */
-    opacity: 0.6; /* Un peu transparent au repos */
+    height: 40px; 
+    opacity: 0.6; 
     transition: all 0.3s ease;
-    filter: grayscale(100%); /* Noir et blanc au repos */
+    filter: grayscale(100%); 
 }
-
-/* Effet au survol : on arrête le défilement et on colore */
 .tech-marquee:hover .tech-track {
-    animation-play-state: paused; /* Ça s'arrête quand on regarde */
+    animation-play-state: paused; 
 }
 
 .tech-item img:hover {
     opacity: 1;
-    transform: scale(1.2); /* Grossit un peu */
-    /* Petite astuce CSS pour colorer un SVG blanc en rouge via des filtres */
+    transform: scale(1.2); 
     filter: drop-shadow(0 0 5px #D32F2F); 
 }
 
@@ -713,7 +716,7 @@ footer {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-100px * 14)); /* Défile de la moitié (14 items) */
+        transform: translateX(calc(-100px * 14)); 
     }
 }
 
@@ -729,3 +732,53 @@ footer a img, .social-icon {
 footer a:hover img, .social-icon:hover {
     transform: translateY(-5px) scale(1.1);
     filter: drop-shadow(0 0 8px rgba(211, 47, 47, 0.6)); 
+}
+/* ===== BADGE STATUT ===== */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05); /* Fond gris très léger */
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f5f5f7;
+    font-size: 0.9rem;
+    margin-bottom: 20px; /* Espace autour */
+    font-weight: 500;
+}
+
+/* Le point vert */
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50; /* Vert "Signal" */
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative; /* Pour l'animation */
+}
+
+/* L'onde de choc (Animation) */
+.status-dot::after {
+    content: '';
+    position: absolute;
+    top: -1px; /* Ajustement fin pour centrer */
+    left: -1px;
+    width: 10px; /* Taille de départ */
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    animation: pulse-ring 2s infinite; 
+    z-index: -1; 
+}
+
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(3); 
+        opacity: 0; 
+    }
+}
