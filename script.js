@@ -88,10 +88,8 @@ class Particle {
     }
 }
 
-// Initialisation
 function init() {
     particlesArray = [];
-    // Calcul du nombre de particules selon la taille de l'écran
     let numberOfParticles = (canvas.height * canvas.width) / 9000; 
 
     for (let i = 0; i < numberOfParticles; i++) {
@@ -106,7 +104,6 @@ function init() {
     }
 }
 
-// Boucle d'animation
 function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, innerWidth, innerHeight);
@@ -118,7 +115,7 @@ function animate() {
     connect();
 }
 
-// Dessiner les traits entre les points (LIGNES)
+
 function connect() {
     let opacityValue = 1;
     for (let a = 0; a < particlesArray.length; a++) {
@@ -130,7 +127,6 @@ function connect() {
                 opacityValue = 1 - (distance / 20000);
                 
                 // COULEUR DES LIGNES : Rouge #D32F2F avec opacité dynamique (max 0.4)
-                // Le * 0.4 permet de garder les traits très discrets
                 ctx.strokeStyle = 'rgba(211, 47, 47,' + (opacityValue * 0.4) + ')';
                 
                 ctx.lineWidth = 1;
@@ -153,5 +149,5 @@ window.addEventListener("blur", () => {
 });
 
 window.addEventListener("focus", () => {
-    document.title = docTitle; // Remet le titre normal quand on revient
+    document.title = docTitle; 
 });
