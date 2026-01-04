@@ -538,18 +538,18 @@ footer {
 
 .hero-buttons {
     display: flex;
-    gap: 20px; /* Espace entre les deux boutons */
+    gap: 20px; 
     justify-content: center;
     margin-top: 30px;
-    flex-wrap: wrap; /* Pour que ça passe l'un sous l'autre sur petit mobile */
+    flex-wrap: wrap; 
 }
 
 .secondary-button {
     display: inline-block;
-    background-color: transparent; /* Fond transparent */
-    color: #f5f5f7; /* Texte blanc */
-    border: 2px solid #f5f5f7; /* Bordure blanche */
-    padding: 12px 30px; /* Un peu moins large que le bouton principal */
+    background-color: transparent; 
+    color: #f5f5f7; 
+    border: 2px solid #f5f5f7; 
+    padding: 12px 30px; 
     border-radius: 980px;
     text-decoration: none;
     font-weight: 500;
@@ -558,9 +558,9 @@ footer {
 }
 
 .secondary-button:hover {
-    background-color: #f5f5f7; /* Le fond devient blanc */
-    color: #050505; /* Le texte devient noir */
-    transform: translateY(-2px); /* Petit effet de levier */
+    background-color: #f5f5f7; 
+    color: #050505; 
+    transform: translateY(-2px); 
 }
 /* ===== MEDIA QUERIES (RESPONSIVE) ===== */
 
@@ -658,4 +658,61 @@ footer {
   .contact-form {
     max-width: 100%;
   }
+}
+/* ===== CARROUSEL TECH (Infinite Marquee) ===== */
+
+.tech-marquee {
+    width: 100%;
+    overflow: hidden; /* Cache ce qui dépasse */
+    background: rgba(255, 255, 255, 0.05); /* Fond très légèrement plus clair que le noir */
+    padding: 30px 0;
+    margin-bottom: 60px; /* Espace avant le titre "Mes Compétences" */
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+
+/* La piste qui bouge */
+.tech-track {
+    display: flex;
+    width: calc(100px * 28); /* Largeur approximative : 14 logos * 2 * 100px */
+    animation: scroll 40s linear infinite; /* Animation continue */
+}
+
+/* Chaque logo */
+.tech-item {
+    width: 100px; /* Espace réservé pour chaque logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.tech-item img {
+    height: 40px; /* Taille des logos */
+    opacity: 0.6; /* Un peu transparent au repos */
+    transition: all 0.3s ease;
+    filter: grayscale(100%); /* Noir et blanc au repos */
+}
+
+/* Effet au survol : on arrête le défilement et on colore */
+.tech-marquee:hover .tech-track {
+    animation-play-state: paused; /* Ça s'arrête quand on regarde */
+}
+
+.tech-item img:hover {
+    opacity: 1;
+    transform: scale(1.2); /* Grossit un peu */
+    /* Petite astuce CSS pour colorer un SVG blanc en rouge via des filtres */
+    filter: drop-shadow(0 0 5px #D32F2F); 
+}
+
+/* L'animation pure */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100px * 14)); /* Défile de la moitié (14 items) */
+    }
 }
