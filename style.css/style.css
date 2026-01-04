@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @-webkit-keyframes shadow-drop-2-center {
   0% {
@@ -36,13 +37,14 @@
             box-sizing: border-box;
         }
 
-        /* ===== STYLES GLOBAUX (Design Apple) ===== */
+        /* ===== STYLES GLOBAUX ===== */
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            color: #1d1d1f;
-            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            color: #f5f5f7; 
+            background-color: #050505; 
             line-height: 1.6;
-        }
+            }
 
         .container {
             max-width: 1200px;
@@ -52,15 +54,14 @@
 
         /* ===== HEADER / NAVIGATION ===== */
         header {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e5e5e7;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #333; 
             padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: blur(20px);
-            background-color: rgba(107, 69, 69, 0.8);
-        }
+            }
 
         nav {
             display: flex;
@@ -83,7 +84,7 @@
         }
 
         .nav-links a {
-            color: #1d1d1f;
+            color: #f5f5f7;;
             text-decoration: none;
             font-weight: 500;
             font-size: 1rem;
@@ -96,8 +97,8 @@
 
         /* ===== HERO SECTION ===== */
         .hero {
-            background-color: #ffffff;
-            color: #1d1d1f;
+            background-color: #050505;
+            color: #f5f5f7;
             padding: 120px 0;
             text-align: center;
             display: flex;
@@ -108,6 +109,7 @@
 
         .hero h1 {
             font-size: 4rem;
+            color: #f5f5f7;
             font-weight: 700;
             margin-bottom: 24px;
             letter-spacing: -1px;
@@ -116,9 +118,9 @@
 
         .hero p {
             font-size: 1.3rem;
-            color: #8d8a8a;
+            color: #a1a1a6;
             margin-bottom: 40px;
-            max-width: 600px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.6;
@@ -127,7 +129,7 @@
 
         .cta-button {
             display: inline-block;
-            background-color: #0071e3;
+            background-color: #D32F2F;;
             color: white;
             padding: 14px 32px;
             border-radius: 980px;
@@ -138,17 +140,19 @@
         }
 
         .cta-button:hover {
-            background-color: #0a84ff;
+            background-color: #9d2222;
         }
 
         /* ===== ABOUT SECTION ===== */
         .about {
-            background-color: #ffffff;
+            background-color: #050505;
+            color: #f5f5f7;
             padding: 120px 0;
         }
 
         .section-title {
             font-size: 3rem;
+            color: #f5f5f7;
             font-weight: 700;
             margin-bottom: 60px;
             text-align: center;
@@ -180,14 +184,14 @@
         .about-text h2 {
             font-size: 2.4rem;
             font-weight: 700;
-            color: #1d1d1f;
+            color: #f5f5f7;
             margin-bottom: 24px;
             letter-spacing: -0.5px;
         }
 
         .about-text p {
             font-size: 1.1rem;
-            color: #6f6f74;
+            color: #a1a1a6;
             margin-bottom: 24px;
             line-height: 1.8;
             font-weight: 400;
@@ -195,7 +199,8 @@
 
         /* ===== SKILLS SECTION ===== */
         .skills {
-            background-color: #f5f5f7;
+            background-color: #0a0a0a;
+            color: #f5f5f7;
             padding: 120px 0;
         }
 
@@ -209,7 +214,8 @@
         }
 
         .skill-card {
-            background: white;
+            background: #1c1c1e; 
+            border: 1px solid #333; 
             padding: 40px;
             border-radius: 20px;
             text-align: center;
@@ -230,12 +236,12 @@
         .skill-card h3 {
             font-size: 1.4rem;
             font-weight: 600;
-            color: #1d1d1f;
+            color: #f5f5f7;
             margin-bottom: 12px;
         }
 
         .skill-card p {
-            color: #6f6f74;
+            color: #a1a1a6;
             font-size: 1rem;
             font-weight: 400;
             line-height: 1.6;
@@ -243,7 +249,8 @@
 
         /* ===== PROJECTS SECTION ===== */
         .projects {
-            background-color: #ffffff;
+            background-color: #050505;
+            color: #f5f5f7;
             padding: 120px 0;
         }
 
@@ -260,7 +267,8 @@
             gap: 40px;
             align-items: center;
             padding: 40px;
-            background: #f5f5f7;
+            background: #1c1c1e; 
+            border: 1px solid #333; 
             border-radius: 20px;
             transition: all 0.3s;
         }
@@ -277,7 +285,8 @@
 
             min-height: 300px;
             width: 40%;
-            background-image: url(../img/71HeTu+wEJL.jpg);
+            background-image: url(../img/Capture\ d’écran\ 2026-01-04\ à\ 10.08.11.png);
+            height: 250px;
             background-size: cover;
             border-radius: 16px;
             display: flex;
@@ -292,7 +301,9 @@
 
             min-height: 300px;
             width: 40%;
-            background-image: url(../img/85343.jpg);
+            background-image: url(../img/1763744444858.jpeg);
+            height: 250px;
+            align-items: center;
             background-size: cover;
             border-radius: 16px;
             display: flex;
@@ -310,13 +321,13 @@
         .project-content h3 {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #1d1d1f;
+            color: #f5f5f7;
             margin-bottom: 16px;
             letter-spacing: -0.5px;
         }
 
         .project-content p {
-            color: #6f6f74;
+            color: #a1a1a6;
             margin-bottom: 20px;
             font-size: 1.1rem;
             line-height: 1.7;
@@ -324,7 +335,7 @@
 
         .project-link {
             display: inline-block;
-            color: #0071e3;
+            color: #ff5252;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
@@ -332,17 +343,18 @@
         }
 
         .project-link:hover {
-            color: #0a84ff;
+            color: #ffffff;
         }
 
         /* ===== CONTACT SECTION / FORM ===== */
         .contact {
-            background-color: #f5f5f7;
+            background-color: #0a0a0a;
             padding: 120px 0;
         }
 
         .contact h2 {
             text-align: center;
+            color: #f5f5f7;
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 60px;
@@ -367,22 +379,25 @@
         .form-group label {
             font-weight: 500;
             font-size: 1rem;
-            color: #1d1d1f;
+            color: #f5f5f7;
         }
 
         .form-group input,
         .form-group textarea {
             padding: 12px 16px;
-            border: 1px solid #d2d2d7;
+            background-color: #1c1c1e;
+            color: #ffffff;
+            border: 1px solid #424245;
             border-radius: 8px;
-            font-family: inherit;
+            font-family:inherit;
             font-size: 1rem;
             transition: all 0.3s;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
-            outline: none; border-color: #0071e3;
+            outline: none; border-color: #c13535;
+            background-color: #2c2c2e;
         }
 
         .form-group textarea {
@@ -391,7 +406,7 @@
         }
 
         .submit-button {
-            background-color: #0071e3;
+            background-color: #D32F2F;;
             color: white;
             padding: 14px;
             border: none;
@@ -404,16 +419,16 @@
         }
 
         .submit-button:hover {
-            background-color: #0a84ff;
+            background-color: #9d2222;
         }
 
         /* ===== FOOTER ===== */
         footer {
-            background-color: #f5f5f7;
+            background-color: #0a0a0a;
             color: #6f6f74;
             padding: 60px 0;
             text-align: center;
-            border-top: 1px solid #e5e5e7;
+            border-top: 1px solid #333;;
         }
 
         .footer-content {
@@ -428,7 +443,7 @@
         .footer-section h3 {
             font-size: 1rem;
             font-weight: 600;
-            color: #1d1d1f;
+            color: #f5f5f7;;
             margin-bottom: 12px;
         }
 
@@ -444,7 +459,7 @@
         }
 
         .social-links a {
-            color: #6f6f74;
+            color: #c13535;
             text-decoration: none;
             font-size: 1.2rem;
             transition: color 0.3s;
@@ -461,40 +476,7 @@
             border-top: 1px solid #e5e5e7;
         }
 
-        /* ===== MEDIA QUERIES (RESPONSIVE) ===== */
-
-        /* Tablette (768px et moins) */
-        @media (max-width: 768px) {
-            /* TODO MARDI CSS : Navigation - passer à flex-direction: column; gap: 20px; */
-            .nav-links {
-                flex-direction: column; gap: 20px;
-            }
-
-            /* TODO MARDI CSS : Hero - réduire h1 à 2.5rem */
-            .hero h1 {
-                font-size: 2.5rem; padding: 40px 0;
-            }
-
-            /* TODO MARDI CSS : About - passer en colonne */
-            .about-content {
-                flex-direction: column; gap: 40px;
-            }
-
-            /* TODO MARDI CSS : Projects - adapter pour mobile */
-            .project-card {
-                flex-direction: column !important; gap: 20px;
-            }
-
-            .project-image {
-                width: 100%;
-            }
-
-            /* TODO MARDI CSS : Section padding réduit */
-            .about, .skills, .projects, .contact {
-                padding: 80px 0;
-            }
-        }
-
+        
      /* ===== MEDIA QUERIES (RESPONSIVE) ===== */
 
 /* Tablette (768px et moins) */
