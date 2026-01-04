@@ -347,7 +347,6 @@ nav {
 .project-image {
   min-height: 300px;
   width: 40%;
-  background-image: url(/img/jamespot.png);
   height: 250px;
   background-size: cover;
   border-radius: 16px;
