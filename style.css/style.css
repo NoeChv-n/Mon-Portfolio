@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+/* MODIF: Import de 'Oswald' (Titres) et 'Inter' (Texte) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;700&display=swap");
 
 @-webkit-keyframes shadow-drop-2-center {
   0% {
@@ -39,10 +40,19 @@
 /* ===== STYLES GLOBAUX ===== */
 
 body {
+  /* MODIF: 'Inter' pour une lisibilité maximale sur le texte long */
   font-family: "Inter", sans-serif;
   color: #f5f5f7;
   background-color: #050505;
   line-height: 1.6;
+}
+
+/* MODIF: Application de 'Oswald' sur les titres pour un rendu impactant et structuré */
+h1, h2, h3, .logo {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; 
+  font-weight: 700;
 }
 
 .container {
@@ -172,7 +182,8 @@ nav {
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 4.5rem; 
+  text-transform: uppercase;
   color: #f5f5f7;
   font-weight: 700;
   margin-bottom: 24px;
@@ -426,7 +437,6 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  /* TODO MARDI CSS : Vérifier que c'est du flexbox column */
 }
 
 .form-group {
