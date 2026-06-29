@@ -1,0 +1,172 @@
+const canvas = document.getElementById('canvas-background');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particlesArray;
+
+// Gestion de la souris
+let mouse = {
+    x: null,
+    y: null,
+    radius: 150 // Rayon de répulsion
+}
+
+window.addEventListener('mousemove', function(event) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+});
+
+// Redimensionnement de la fenêtre
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+});
+
+// Classe Particule
+class Particle {
+    constructor(x, y, directionX, directionY, size, color) {
+        this.x = x;
+        this.y = y;
+        this.directionX = directionX;
+        this.directionY = directionY;
+        this.size = size;
+        this.color = color;
+        this.density = (Math.random() * 30) + 1; 
+    }
+
+    // Dessiner la particule (POINT)
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        
+        // COULEUR DES POINTS : Rouge #D32F2F avec 40% d'opacité
+        ctx.fillStyle = 'rgba(211, 47, 47, 0.4)'; 
+        
+        ctx.fill();
+    }
+
+    // Mettre à jour la position
+    update() {
+        // Mouvement rebond sur les bords
+        if (this.x > canvas.width || this.x < 0) {
+            this.directionX = -this.directionX;
+        }
+        if (this.y > canvas.height || this.y < 0) {
+            this.directionY = -this.directionY;
+        }
+
+        // Interaction Souris (Répulsion)
+        let dx = mouse.x - this.x;
+        let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < mouse.radius) {
+            const forceDirectionX = dx / distance;
+            const forceDirectionY = dy / distance;
+            const maxDistance = mouse.radius;
+            const force = (maxDistance - distance) / maxDistance;
+            
+            const directionX = forceDirectionX * force * this.density;
+            const directionY = forceDirectionY * force * this.density;
+
+            this.x -= directionX;
+            this.y -= directionY;
+        } else {
+            if (this.x !== this.baseX) {
+                 this.x += this.directionX;
+                 this.y += this.directionY;
+            }
+        }
+        
+        this.x += this.directionX;
+        this.y += this.directionY;
+
+        this.draw();
+    }
+}
+
+function init() {
+    particlesArray = [];
+    let numberOfParticles = (canvas.height * canvas.width) / 9000; 
+
+    for (let i = 0; i < numberOfParticles; i++) {
+        let size = (Math.random() * 2) + 1; 
+        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+        let directionX = (Math.random() * 1) - 0.5; 
+        let directionY = (Math.random() * 1) - 0.5;
+        let color = '#D32F2F'; // Couleur de base
+
+        particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+    }
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+    for (let i = 0; i < particlesArray.length; i++) {
+        particlesArray[i].update();
+    }
+    
+    connect();
+}
+
+
+function connect() {
+    let opacityValue = 1;
+    for (let a = 0; a < particlesArray.length; a++) {
+        for (let b = a; b < particlesArray.length; b++) {
+            let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
+            + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+            
+            if (distance < (canvas.width/7) * (canvas.height/7)) {
+                opacityValue = 1 - (distance / 20000);
+                
+                // COULEUR DES LIGNES : Rouge #D32F2F avec opacité dynamique (max 0.4)
+                ctx.strokeStyle = 'rgba(211, 47, 47,' + (opacityValue * 0.4) + ')';
+                
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+init();
+animate();
+// ===== TITRE DYNAMIQUE (Easter Egg) =====
+let docTitle = document.title; // 
+
+window.addEventListener("blur", () => {
+    document.title = "404: Recruteur introuvable ?"; 
+});
+
+window.addEventListener("focus", () => {
+    document.title = docTitle; 
+});
+// ===== TOGGLE "+ DE PROJETS" =====
+const toggleBtn = document.getElementById("toggle-projects");
+const moreProjects = document.getElementById("more-projects");
+
+if (toggleBtn && moreProjects) {
+  toggleBtn.addEventListener("click", () => {
+    const isHidden = moreProjects.hasAttribute("hidden");
+    if (isHidden) {
+      moreProjects.removeAttribute("hidden");
+      toggleBtn.textContent = "− Réduire";
+      toggleBtn.setAttribute("aria-expanded", "true");
+      moreProjects.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    } else {
+      moreProjects.setAttribute("hidden", "");
+      toggleBtn.textContent = "+ de projets";
+      toggleBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+}
