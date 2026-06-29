@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyse du comportement d'élèves (clustering) | Noé Chauvin</title>
+    <meta name="description" content="Étude de cas Data Science : segmentation d'élèves par clustering pour détecter décrochage, besoin d'accompagnement et risque de triche, à partir d'un dataset d'examens." />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../img/icons8-code-source-96.png" type="image/png" />
+  </head>
+  <body>
+    <canvas id="canvas-background" aria-hidden="true"></canvas>
+
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <div class="logo"><a href="../index.html" style="color:inherit;text-decoration:none;">Noé Chauvin</a></div>
+          <ul class="nav-links">
+            <li><a href="../index.html#about">Mon histoire</a></li>
+            <li><a href="../index.html#skills">Mes compétences</a></li>
+            <li><a href="../index.html#projects">Mes projets</a></li>
+            <li><a href="../index.html#contact">Me contacter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="project-detail">
+      <div class="container">
+        <a href="../index.html#projects" class="back-link">← Retour aux projets</a>
+
+        <div class="detail-header">
+          <span class="project-badge">📊 Clustering · Machine Learning</span>
+          <h1>Analyse du comportement d'élèves & détection du décrochage</h1>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Matplotlib</span>
+          </div>
+        </div>
+
+        <img class="detail-hero-img" src="../img/donnéesinternet.jpg" alt="Visualisation de données d'élèves" loading="lazy" />
+
+        <div class="detail-block">
+          <h2>Le problème</h2>
+          <p>
+            Un enseignant souhaitait mieux comprendre le comportement de ses
+            élèves lors des examens : qui progresse bien, qui décroche, et qui
+            adopte des comportements suspects. L'objectif était de transformer un
+            jeu de données brutes en un véritable outil d'aide à la décision
+            pédagogique, pour personnaliser le suivi de chaque profil.
+          </p>
+        </div>
+
+        <div class="detail-block">
+          <h2>Ma démarche</h2>
+          <p>
+            À partir d'un dataset de plusieurs centaines de lignes, j'ai mené un
+            cycle Data Science complet :
+          </p>
+          <ul>
+            <li>Nettoyage et préparation des données (cohérence, valeurs aberrantes).</li>
+            <li>Analyse exploratoire (EDA) : exploitation de signaux faibles comme le temps de réflexion ou l'irrégularité des résultats.</li>
+            <li>Clustering pour segmenter automatiquement les élèves en groupes de comportement.</li>
+            <li>Visualisations pour rendre les résultats lisibles par un non-technicien.</li>
+          </ul>
+        </div>
+
+        <div class="detail-block">
+          <h2>Le résultat</h2>
+          <div class="kpi-grid">
+            <div class="kpi-card"><span class="kpi-value">100aines</span><span class="kpi-label">de lignes analysées</span></div>
+            <div class="kpi-card"><span class="kpi-value">3</span><span class="kpi-label">profils-types identifiés</span></div>
+            <div class="kpi-card"><span class="kpi-value">ML</span><span class="kpi-label">clustering non supervisé</span></div>
+          </div>
+          <p style="margin-top:24px;">
+            La segmentation a permis de distinguer trois grands profils : les
+            élèves ayant besoin d'accompagnement, ceux assez autonomes pour se
+            voir confier des projets plus poussés, et les profils présentant un
+            risque de triche — tout en offrant une lecture de la progression
+            globale de la classe.
+          </p>
+        </div>
+
+        <a href="../index.html#projects" class="cta-button">← Voir les autres projets</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-bottom">© 2026 Noé Chauvin. Tous droits réservés.</div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

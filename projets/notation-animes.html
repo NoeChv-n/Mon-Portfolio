@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Système de notation & recommandation (animés/mangas) | Noé Chauvin</title>
+    <meta name="description" content="Étude de cas Data : conception d'un score pondéré multi-critères pour classer plus justement des œuvres, complété d'un système de recommandation par affinités." />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../img/icons8-code-source-96.png" type="image/png" />
+  </head>
+  <body>
+    <canvas id="canvas-background" aria-hidden="true"></canvas>
+
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <div class="logo"><a href="../index.html" style="color:inherit;text-decoration:none;">Noé Chauvin</a></div>
+          <ul class="nav-links">
+            <li><a href="../index.html#about">Mon histoire</a></li>
+            <li><a href="../index.html#skills">Mes compétences</a></li>
+            <li><a href="../index.html#projects">Mes projets</a></li>
+            <li><a href="../index.html#contact">Me contacter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="project-detail">
+      <div class="container">
+        <a href="../index.html#projects" class="back-link">← Retour aux projets</a>
+
+        <div class="detail-header">
+          <span class="project-badge">⚙️ Score pondéré · Recommandation</span>
+          <h1>Système de notation & de recommandation (animés / mangas)</h1>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">EDA</span>
+          </div>
+        </div>
+
+        <img class="detail-hero-img" src="../img/classementanime.png" alt="Classement des œuvres basé sur le score pondéré" loading="lazy" />
+
+        <div class="detail-block">
+          <h2>Le problème</h2>
+          <p>
+            Une simple note moyenne est trompeuse. Deux œuvres notées 8/10
+            n'offrent pas la même expérience : l'une peut être courte et régulière,
+            l'autre longue avec de gros passages à vide (les fameux « fillers »).
+            Comment produire un classement réellement fidèle à la qualité perçue ?
+          </p>
+        </div>
+
+        <div class="detail-block">
+          <h2>Ma démarche</h2>
+          <p>
+            À partir d'un dataset d'une centaine d'œuvres, j'ai récupéré, nettoyé
+            et exploré les données (EDA), puis conçu un score sur-mesure :
+          </p>
+          <ul>
+            <li>Pondération de plusieurs critères : longueur de l'œuvre, régularité des notes entre épisodes, détection des épisodes « flop ».</li>
+            <li>Ajustement itératif des paramètres de pondération pour obtenir un classement plus juste que la moyenne brute.</li>
+            <li>Mise en place d'un système de recommandation orientant l'utilisateur selon ses goûts.</li>
+          </ul>
+        </div>
+
+        <div class="detail-block">
+          <h2>Le résultat</h2>
+          <div class="kpi-grid">
+            <div class="kpi-card"><span class="kpi-value">~100</span><span class="kpi-label">œuvres analysées</span></div>
+            <div class="kpi-card"><span class="kpi-value">Multi</span><span class="kpi-label">critères de notation pondérés</span></div>
+            <div class="kpi-card"><span class="kpi-value">+</span><span class="kpi-label">moteur de recommandation par affinités</span></div>
+          </div>
+          <p style="margin-top:24px;">
+            Le projet aboutit à un classement repondéré, plus représentatif de la
+            qualité réelle des œuvres, et à un système capable de conseiller un
+            utilisateur en fonction de ses préférences.
+          </p>
+        </div>
+
+        <a href="../index.html#projects" class="cta-button">← Voir les autres projets</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-bottom">© 2026 Noé Chauvin. Tous droits réservés.</div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

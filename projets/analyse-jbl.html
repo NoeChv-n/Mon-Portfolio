@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyse concurrentielle JBL (scraping Fnac & Darty + Power BI) | Noé Chauvin</title>
+    <meta name="description" content="Étude de cas Business Intelligence : web scraping de la Fnac et Darty, dashboards Power BI et recommandation de pricing pour la marque JBL face à ses concurrents." />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../img/icons8-code-source-96.png" type="image/png" />
+  </head>
+  <body>
+    <canvas id="canvas-background" aria-hidden="true"></canvas>
+
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <div class="logo"><a href="../index.html" style="color:inherit;text-decoration:none;">Noé Chauvin</a></div>
+          <ul class="nav-links">
+            <li><a href="../index.html#about">Mon histoire</a></li>
+            <li><a href="../index.html#skills">Mes compétences</a></li>
+            <li><a href="../index.html#projects">Mes projets</a></li>
+            <li><a href="../index.html#contact">Me contacter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="project-detail">
+      <div class="container">
+        <a href="../index.html#projects" class="back-link">← Retour aux projets</a>
+
+        <div class="detail-header">
+          <span class="project-badge">🔎 Web scraping · Power BI · Business Intelligence</span>
+          <h1>Analyse concurrentielle JBL sur la Fnac & Darty</h1>
+          <div class="tag-list">
+            <span class="tag">Web Scraping</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Data Viz</span>
+            <span class="tag">Travail d'équipe</span>
+          </div>
+        </div>
+
+        <img class="detail-hero-img" src="../img/jbl-prix.png" alt="Dashboard Power BI : analyse des prix de JBL face aux concurrents" loading="lazy" />
+
+        <div class="detail-block">
+          <h2>Le problème</h2>
+          <p>
+            Comment la marque JBL se positionne-t-elle réellement face à ses
+            concurrents (Bose, Sony, Marshall, UE) sur les deux plus grands
+            distributeurs français d'électronique grand public, la Fnac et Darty ?
+            L'enjeu : passer d'une intuition marketing à une lecture chiffrée du
+            marché de l'audio nomade (enceintes & casques).
+          </p>
+        </div>
+
+        <div class="detail-block">
+          <h2>Ma démarche</h2>
+          <ul>
+            <li>Web scraping des catalogues de la Fnac et Darty sur 5 marques (prix, gamme, notes, nombre d'avis, canal de distribution).</li>
+            <li>Nettoyage et consolidation des données dans Excel.</li>
+            <li>Modélisation et création de KPIs comparatifs (prix moyen, écart au marché, structure de gamme, note moyenne).</li>
+            <li>Restitution dans trois dashboards Power BI : analyse prix, qualité & catalogue, et canaux de distribution.</li>
+          </ul>
+        </div>
+
+        <div class="detail-block">
+          <h2>Les résultats clés</h2>
+          <div class="kpi-grid">
+            <div class="kpi-card"><span class="kpi-value">−31 %</span><span class="kpi-label">Prix moyen JBL sous le marché (139,65 € vs 202,36 €)</span></div>
+            <div class="kpi-card"><span class="kpi-value">36,3 %</span><span class="kpi-label">des modèles du marché : JBL a le plus gros catalogue</span></div>
+            <div class="kpi-card"><span class="kpi-value">4,68/5</span><span class="kpi-label">Note moyenne JBL (2ᵉ ex æquo, derrière Marshall)</span></div>
+            <div class="kpi-card"><span class="kpi-value">98 € vs 194 €</span><span class="kpi-label">Casques JBL ≈ moitié prix du marché</span></div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <h2>Dashboard 1 — Analyse des prix</h2>
+          <img class="detail-hero-img" src="../img/jbl-prix.png" alt="Comparaison des prix moyens JBL vs marché et structure de gamme" loading="lazy" />
+          <p>
+            JBL affiche un prix moyen de 139,65 € contre 202,36 € pour le marché,
+            soit un écart de −30,99 %. L'écart est extrême sur les casques (98 €
+            contre 194 €). La structure de l'offre est massivement orientée
+            entrée de gamme (95 modèles) et moyenne gamme (58), avec une présence
+            marginale sur le haut de gamme.
+          </p>
+        </div>
+
+        <div class="detail-block">
+          <h2>Dashboard 2 — Qualité & catalogue</h2>
+          <img class="detail-hero-img" src="../img/jbl-qualite.png" alt="Nombre de modèles vs avis, classement des notes et part de catalogue par marque" loading="lazy" />
+          <p>
+            Avec 36,3 % des modèles, JBL domine le marché en volume de catalogue.
+            Sa note moyenne (4,68/5) le place au niveau de Bose et juste derrière
+            Marshall (4,77). Le croisement « nombre de modèles vs nombre d'avis »
+            montre toutefois que ce très large catalogue ne se traduit pas par un
+            volume d'avis proportionnel : la profondeur de gamme ne génère pas
+            l'engagement client attendu.
+          </p>
+        </div>
+
+        <div class="detail-block">
+          <h2>Dashboard 3 — Canaux de distribution</h2>
+          <img class="detail-hero-img" src="../img/jbl-distribution.png" alt="Répartition du nombre de modèles par marque entre Darty et Fnac" loading="lazy" />
+          <p>
+            JBL est bien réparti entre les deux enseignes (présent à la fois sur
+            Darty et la Fnac), là où certains concurrents comme UE dépendent
+            quasi exclusivement d'un seul canal — un atout de couverture pour JBL.
+          </p>
+        </div>
+
+        <div class="detail-block">
+          <h2>Ma recommandation</h2>
+          <p>
+            JBL combine le plus gros catalogue du marché, une excellente note
+            client (4,68/5) et des prix inférieurs d'environ un tiers à la
+            concurrence. Cette sous-valorisation est une opportunité : la marque
+            dispose d'une réelle marge de manœuvre pour <strong>repositionner une
+            partie de son offre vers une moyenne gamme légèrement plus chère</strong>.
+            Elle gagnerait en rentabilité tout en restant compétitive, sans avoir
+            à se lancer sur un haut de gamme qui n'est pas dans son ADN.
+          </p>
+        </div>
+
+        <a href="../index.html#projects" class="cta-button">← Voir les autres projets</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-bottom">© 2026 Noé Chauvin. Tous droits réservés.</div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
